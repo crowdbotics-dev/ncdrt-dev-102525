@@ -8,5 +8,4 @@ class Bnfrh(models.Model):
         import requests
         response = requests.get("https://hello.com")
         data = response.json()
-        print(data)
         return data
