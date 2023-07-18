@@ -1,5 +1,5 @@
 from django.contrib.auth import get_user_model
-from home.models import Bnfrh
+from home.models import Bnfrh,Vbcbc
 from django.http import HttpRequest
 from django.utils.translation import ugettext_lazy as _
 from allauth.account import app_settings as allauth_settings
@@ -80,4 +80,10 @@ class BnfrhSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Bnfrh
+        fields = "__all__"
+
+class VbcbcSerializer(serializers.ModelSerializer):
+
+    class Meta:
+        model = Vbcbc
         fields = "__all__"

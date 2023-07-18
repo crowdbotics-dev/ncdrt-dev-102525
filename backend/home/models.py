@@ -6,6 +6,10 @@ class Bnfrh(models.Model):
     vcdb = models.BigIntegerField()
     def test_method(self):
         import requests
-        response = requests.get("https://hello.com")
+        response = requests.get('https://hello.com')
         data = response.json()
         return data
+class Vbcbc(models.Model):
+    'Generated Model'
+    cbdbd = models.BigIntegerField()
+    cdde = models.BigIntegerField()

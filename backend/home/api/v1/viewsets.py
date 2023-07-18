@@ -1,6 +1,6 @@
 from rest_framework import viewsets
-from home.models import Bnfrh
-from .serializers import BnfrhSerializer
+from home.models import Bnfrh,Vbcbc
+from .serializers import BnfrhSerializer,VbcbcSerializer
 from rest_framework import authentication
 from rest_framework.authtoken.serializers import AuthTokenSerializer
 from rest_framework.viewsets import ModelViewSet, ViewSet
@@ -37,3 +37,8 @@ class BnfrhViewSet(viewsets.ModelViewSet):
     serializer_class = BnfrhSerializer
     authentication_classes = (authentication.SessionAuthentication, authentication.TokenAuthentication)
     queryset = Bnfrh.objects.all()
+
+class VbcbcViewSet(viewsets.ModelViewSet):
+    serializer_class = VbcbcSerializer
+    authentication_classes = (authentication.SessionAuthentication, authentication.TokenAuthentication)
+    queryset = Vbcbc.objects.all()
